@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+    <title>Regular Expression Validation</title>
+    <style>
+        .btn-btn{
+            background-color: orange;
+
+        }
+        .btn-btn:hover{
+            background-color: red;
+        }
+        .guides{
+            background-color: bisque;
+        }
+        .guidesIN{
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <h4>Welcome!! Here You can Verified Your Regular Expression</h4>
+        <h6>Please Select An Option For Which You want to verify</h6>
+        <select name="regex" id="regex">
+        <option value="none" class="chooseOption">Click Here to Chose the Option</option>
+         <option value="email" class="email_class">Email</option>
+         <option value="phone" class="Phone_number">Phone Number</option>
+         <option value="postal" class="Post_code"> Post Code</option>
+        </select>
+     </div><br><br>
+     <div class="container">
+        <div id="container-Inner">
+            <form action="" id="regexValidation">
+                <h5>Please Write Your Regex Here</h5>
+                <input type="text" name="" id="regexTake">
+                <button class="btn-btn">Submit</button>
+            </form>
+        </div>
+
+        <div class="showResult">
+           
+        </div>
+     </div>
+
+     <div class="container"><br>
+        <div class="guides">
+            <h3>Guides >>>></h3>
+        <ol class="guidesIN">
+            <li>Select An Option From the box Then the From will be Shown in the page.</li>
+            <li>Then You Have to Fillup  Your required input.</li>
+            <li>Submit the from then It will Show your Email,Phone Number or Post Code is Correct Or not.</li>
+            <li>Thanks From <b>Md.Ashraful Islam</b> For Visit The Page</li>
+        </ol><br>
+        </div>
+     </div>
+
+     <script src="js/regex.js"></script>
+</body>
+</html>

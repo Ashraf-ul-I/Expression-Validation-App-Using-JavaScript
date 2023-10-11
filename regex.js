@@ -16,7 +16,6 @@ class UI {
     formOfregex() {
         // Remove the event listener
         this.form.removeEventListener('submit', this.validation);
-
         // Add the event listener based on the selected option
          /**
           * Learn About How actually html value used in the type.
@@ -26,7 +25,8 @@ class UI {
           * to show user that his or her email or phone or postal code is valid or not.
           * Means which type of input user gave to the form its dynamically collect .
           */
-            if (this.regexType === 'email' || this.regexType === 'phone' || this.regexType === 'postal') {
+         document.querySelector('h5').textContent=`Please Write Your ${this.regexType} Here`
+            if (this.regexType === 'email' || this.regexType === 'phoneNumber' || this.regexType === 'postalCode') {
                 this.form.addEventListener('submit', (event) => {
                     event.preventDefault();
                         this.regexValue = this.input.value;
@@ -42,8 +42,8 @@ class UI {
         result.innerHTML = '';
     
         const regexPatterns = {
-            postal: /^[0-9]{4}$/,
-            phone: /^(\+)?(88)?01[0-9]{9}$/,
+            postalCode: /^[0-9]{4}$/,
+            phoneNumber: /^(\+)?(88)?01[0-9]{9}$/,
             email: /^([A-Za-z0-9]\.?)+[^\.]@([A-Za-z0-9]\.?)+[^\.]$/,
         };
 
@@ -102,6 +102,7 @@ function selectTriggered() {
             ui.formOfregex();
         } else if (selectOption.classList.contains('Phone_number')) {
             divOfform.style.display = 'block';
+            
             ui.formOfregex();
         } else if (selectOption.classList.contains('Post_code')) {
             divOfform.style.display = 'block';
